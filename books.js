@@ -16,26 +16,37 @@ const mylibrary=[{title:'amor' ,author:'agunos',pages:12,readBook:"NO"},
 function displayBooks(){
     const bookTableBody = document.querySelector('#bookTable tbody');
     bookTableBody.innerHTML = "";
-    
-    mylibrary.forEach((book)=> {
+
+    mylibrary.forEach((book,index)=> {
         let newRow = bookTableBody.insertRow();
         newRow.insertCell(0).textContent = book.title;
         newRow.insertCell(1).textContent = book.author;
         newRow.insertCell(2).textContent = book.pages;
         newRow.insertCell(3).textContent = book.readBook;
-
+        const deleteCell = newRow.insertCell(4);
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Remove';
+        deleteCell.appendChild(deleteButton);
+        deleteButton.addEventListener('click', () => {
+            deleteBook(index);
+        });
         
 });
 };
+
+function deleteBook(index) {
+    mylibrary.splice(index, 1);
+
+    displayBooks();
+}
+
 function addBookToLibrary(){
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
     const pages = document.querySelector('#pages').value;
     const readRadio = document.querySelector('input[name="readBook"]:checked');
     const readBook = readRadio ? readRadio.value : "NO";
-    
     const newBook = new Books(title, author, pages, readBook);
-    
     mylibrary.push(newBook);
     
     if (!title || !author || !pages || !readRadio) {
