@@ -1,0 +1,50 @@
+header{
+    display: flex;
+    justify-content: center;
+    font-size: 5pc;
+}
+body{
+    background-color: darkgrey;
+}
+#books{
+    display: flex;
+    justify-content: center;
+}
+#books .send {
+    display: flex;
+    background-color: turquoise;
+    font-size: 20px;
+    padding: 10px 15px; /* Adds padding inside the button */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    border-radius: 12px;
+    align-items: center;
+}
+
+#books .send:hover {
+    background-color: lightseagreen;
+}
+.table-wrapper {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the table horizontally */
+}
+
+/* Book table */
+#bookTable {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders collapse */
+}
+
+/* Table headers and cells */
+#bookTable th, #bookTable td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Table headers - styling for readability */
+#bookTable th {
+    background-color: #f2f2f2;
+}
