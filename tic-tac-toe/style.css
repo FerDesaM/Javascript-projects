@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(56, 53, 53);
+}
+#title{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: aliceblue;
+}
+#gameTable {
+    width: 80%; 
+    margin: 20px auto;  
+    border-collapse: collapse;
+}
+
+#gameTable td {
+    width: 60px;  
+    height: 60px; 
+    text-align: center; 
+    font-size: 2em; 
+    border: 2px solid #000; 
+    cursor: pointer; 
+    background-color: #f0f0f0;
+}
+
+#gameTable td:hover {
+    background-color: #e0e0e0;
+}
+
+#playersScores {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Style for buttons */
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Style for input fields */
+input {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px;
+}
