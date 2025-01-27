@@ -1,0 +1,166 @@
+
+.nav buttons{
+    display: flex;
+    justify-content: center;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./images/Best-peruvian-recipes.jpg");  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px 50px 100px;
+  
+    & h1 {
+      font-family: "montserratregular";
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 40px;
+    }
+  
+    & nav {
+      display: flex;
+      gap: 200px;
+  
+      & button {
+          font-family: "arial";
+          font-size: 1.5rem;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          color: white;
+      }
+      button:hover{
+        color: rgb(156, 147, 147);
+      }
+    }
+  }
+  
+  #content {
+    flex: 1;
+  
+    & .hidden {
+      display: none !important;
+    }
+  
+    & .home-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+        & h1 {
+          font-family: "satisfyregular";
+          font-size: 4rem;
+        }
+      
+        & p {
+          font-size: 2.0rem;
+          text-align: center;
+          max-inline-size: 50ch;
+          font-family: "robotolight";
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      
+        & button {
+          font-family: "montserratbold";
+          font-size: 0.6rem;
+          padding: 30px 70px;
+          background-color: #FF8400;
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 2px;
+        }
+    }
+  }
+  
+  .menu-container,
+  .about-container {
+    width: 70%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    padding: 50px 60px;
+  }
+  
+  .menu-container {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  
+    & .menu-item {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+  
+      & h1 {
+        align-self: center;
+        font-family: "arial";
+        font-size: 2.3rem;
+      }
+  
+      & div {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        grid-template-rows: repeat(3, 80px);
+        column-gap: 50px;
+  
+        & img {
+          height: 240px;
+          width: 240px;
+          grid-row: 1 / -1;
+          border-radius: 8px;
+        }
+  
+        & p:first-of-type {
+          font-family: "montserratregular";
+          font-size: 25px;
+        }
+    
+        & p:nth-of-type(2) {
+          font-family: "arial";
+          font-size: 1.0rem;
+        }
+  
+        & p:last-of-type {
+          font-family: "arial";
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    & h1 {
+      align-self: center;
+      font-family: "montserratbold";
+      font-size: 1.3rem;
+    }
+  
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+  
+      & img {
+        height: 2rem;
+        /* filter: invert(94%) sepia(94%) saturate(0%) hue-rotate(201deg) brightness(105%) contrast(105%); */
+      }
+    }
+  }
