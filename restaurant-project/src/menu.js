@@ -38,6 +38,11 @@ class Dishes{
     ]
 
 }
+
+class Images{
+    static ImagesList=
+    [ajiGallina,lomoSaltado,causaRellena,ceviche,anticucho];
+};
 function VisualizationMenu(imgViz,menuItem){
     const menuContainer=document.createElement("div");
     const menuImage=document.createElement("img");
@@ -61,6 +66,8 @@ function VisualizationMenu(imgViz,menuItem){
 
 };
 
+
+
 function loadMenu(){
     const content=document.querySelector("#content");
     const menuContainer=document.createElement("div");
@@ -74,14 +81,15 @@ function loadMenu(){
     const menuHeader=document.createElement("h1");
     menuHeader.textContent="DIshes Availables";
     menuContainer_1.appendChild(menuHeader);
-    menuContainer_1.appendChild(VisualizationMenu(ajiGallina,Dishes.DishesList[0]));
-    menuContainer_1.appendChild(VisualizationMenu(lomoSaltado,Dishes.DishesList[1]));
-    menuContainer_1.appendChild(VisualizationMenu(causaRellena,Dishes.DishesList[2]));
-    menuContainer_1.appendChild(VisualizationMenu(ceviche,Dishes.DishesList[3]));
-    menuContainer_1.appendChild(VisualizationMenu(anticucho,Dishes.DishesList[4]));
+
+    
+    if(Images.ImagesList.length<Dishes.DishesList.length){
+        return;
+    }
+    for(let i=0;i<Dishes.DishesList.length;i++){
+        menuContainer_1.appendChild(VisualizationMenu(Images.ImagesList[i],Dishes.DishesList[i]))
+    }
     menuContainer.appendChild(menuContainer_1);
-
-
     content.appendChild(menuContainer);
 }
 
