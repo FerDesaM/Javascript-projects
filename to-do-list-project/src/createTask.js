@@ -1,5 +1,5 @@
 import { Task } from "./Task";
-
+import { Menu } from "./menu";
 const createTitleInput=function(){
     const input=document.createElement("input");
     input.type="Text";
@@ -61,6 +61,8 @@ const handleFormSubmit = function(formTask, setTitle, setDescription, setDate, s
         const priority = setPriority.value;
 
         const newTask = new Task(title, description, date, priority);
+        Menu.currentProject.addTask(newTask);
+        Menu.renderTask();
         console.log(newTask);
         formTask.reset();
         hideTaskForm();
